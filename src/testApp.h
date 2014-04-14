@@ -1,3 +1,11 @@
+//
+// Sukhavati
+// Created By Yang Wang @ 2014 - New York
+// This is a Thesis Project
+// 
+
+
+
 #pragma once
 
 #include "ofMain.h"
@@ -24,11 +32,26 @@ class testApp : public ofBaseApp{
     
     
     bool noise;
-    bool freeze;
+    bool TimeToDoLastRead;
+    bool body2_set;
+    bool acceleration_set;
+    bool p_returning;
+    bool setVV;
     ofMesh mesh;
-   
     ofEasyCam cam;
     ofxKinect kinect;
+    
     vector<ofVec3f> body;
-		
+    vector<ofVec3f> body2;
+    vector<ofVec3f> velocity;
+    vector<ofVec3f> desired;
+    vector<ofVec3f> steer;
+    vector<ofVec3f> acceleration;
+  
+    float timer;
+    float tsA;
+    float tsB;
+    float maxSpeed;
+    float maxforce;
+    float releaseTime;
 };
